@@ -63,6 +63,17 @@ npm run test:unit   # Vitest unit tests (transforms + data-access helpers)
 npm run test:e2e    # Playwright E2E tests (builds + previews the static site first)
 ```
 
+## Coding standards
+
+Our repository standards live in the `.github/instructions/` directory and are meant to keep contributions consistent and review-friendly.
+
+- Comment intent, not mechanics: explain why a decision exists, not what the code already says.
+- Document exported functions in `db/` and `src/lib/` with TSDoc/JSDoc for purpose, parameters, and return values.
+- Document reusable `.astro` component `Props` interfaces so the public API stays clear.
+- Keep TypeScript types explicit and prefer typed imports for TS-only symbols; ESLint enforces the typing conventions where it can.
+
+See the instruction files for the full guidance: [`astro.instructions.md`](.github/instructions/astro.instructions.md), [`drizzle.instructions.md`](.github/instructions/drizzle.instructions.md), [`style.instructions.md`](.github/instructions/style.instructions.md), [`ui.instructions.md`](.github/instructions/ui.instructions.md), and [`unit-tests.instructions.md`](.github/instructions/unit-tests.instructions.md).
+
 ## Linting
 
 The frontend uses ESLint to enforce code quality across TypeScript and Astro files. Run it with:

@@ -18,6 +18,13 @@ Refer to technology-specific instruction files:
 - [`astro.instructions.md`](astro.instructions.md) - Astro pages, layouts, and components
 - [`style.instructions.md`](style.instructions.md) - Tailwind CSS styling patterns
 
+## Commenting & Documentation
+
+- Comment the intent, not the mechanics: explain why a block exists, what decision or constraint it addresses, or why a workaround is needed.
+- Do not restate the code in prose. A comment that says "Checks if the user is logged in" next to `if (user) {}` is redundant and should be removed.
+- Keep comments aligned with the code they describe. Stale comments are bugs; update or delete them in the same change that modifies the related logic.
+- Prefer self-documenting code and descriptive names before adding comments. Use comments for non-obvious trade-offs, edge cases, and business rules that would otherwise be easy to miss.
+
 ## Core Principles
 
 ### Testability

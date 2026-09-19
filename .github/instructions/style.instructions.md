@@ -46,6 +46,14 @@ ALL UI components MUST use dark theme colors:
 - Use semantic grouping: layout, spacing, colors, typography
 - Keep utility combinations readable and maintainable
 
+## TypeScript and formatting rules
+
+- Use explicit type annotations for function parameters and return values, especially in `db/` and `src/lib/`.
+- Prefer `import type` for TypeScript-only imports so the type boundary is obvious.
+- Use interfaces for object contracts when a shape is reused or exposed, such as `Props` objects and app-facing data models.
+- Keep formatting consistent: semicolons, trailing commas, and single quotes are not required by the runtime, but code should match the repository's existing style and pass ESLint without manual exceptions.
+- ESLint enforces the repository's default TypeScript conventions, including `@typescript-eslint/consistent-type-imports` for typed imports, and the rest of the recommended config continues to guard syntax and correctness.
+
 ## Modern UI Patterns
 
 - Rounded corners: `rounded-lg`, `rounded-xl`, `rounded-2xl`
